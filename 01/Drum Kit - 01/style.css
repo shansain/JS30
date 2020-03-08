@@ -1,0 +1,37 @@
+html{
+    
+}
+body,html{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url("./img/IMG_7151.JPG");
+    background-size: cover;
+}
+.keys{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.key{
+    border: solid black 1px;
+    border-radius: 3px;
+    margin: 3px;
+    padding: 1.5px 3px;
+    text-align: center;
+    width: 50px;
+    transition: all 0.07s;
+}
+.playing{
+    transform: scale(1.1);
+    border-color: #cf999c;
+    box-shadow: #cf999c;
+}
+kbd{
+    display: block;
+}
+span{
+    color: #cf999c;
+}
