@@ -1,0 +1,29 @@
+:root{
+    --main-color:#ff6e98;
+    --spacing:10px;
+    --blur:10px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color:black;
+}
+.color-matching{
+    color: var(--main-color);
+}
+.controler{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+img{
+    width: 400px;
+    height: 500px;
+    background: var(--main-color);
+    padding: var(--spacing);
+    filter: blur(var(--blur));
+}
