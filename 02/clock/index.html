@@ -15,5 +15,29 @@
             <div class="hand second"></div>
         </div>
     </div>
+    
+    
+    <script>
+        const hour_hand = document.querySelector('.hour');
+        const min_hand = document.querySelector('.min');
+        const second_hand = document.querySelector('.second');
+
+        function setTime() {
+            const current_time = new Date();
+            const current_seconds = current_time.getSeconds();
+            const second_moves = ((current_seconds/60)*360 +90);
+            second_hand.style.transform = `rotate(${second_moves}deg)`;
+        
+            const current_min = current_time.getMinutes();
+            const min_moves = ((current_min/60)*360 +90);
+            min_hand.style.transform=  `rotate(${min_moves}deg)`;
+            
+            const current_hour = current_time.getHours();
+            const hour_moves = ((current_hour/12)*360 +90);
+            hour_hand.style.transform=  `rotate(${hour_moves}deg)`;
+            
+        }
+        setInterval(setTime, 1000);
+    </script>
 </body>
-</html>
+</html
