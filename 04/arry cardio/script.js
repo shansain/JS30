@@ -26,14 +26,54 @@ const inventors = [
   console.log(full_name);
 
 //  3.
-  // const live = inventors.reduce(obj =>obj.passed-obj.year);
-  // console.log(live)
-   
+  const new_order = inventors.sort(function order(a, b) {
+    if(a.year > b.year){
+      return 1
+    }else{
+      return -1
+      }
+  });
+  console.log(new_order);
 
+//  4.
+  const live = inventors.reduce((lives, inventor)=>{
+    return lives +(inventor.passed - inventor.year);
+  },0);
+  console.log(live);
 
+//  5. 
+  const longest_life = inventors.sort(function order(a, b) {
+    if(a.passed - a.year < b.passed -b.year){
+      return 1
+    }else{
+      return -1
+      }
+  });
+  console.log(longest_life);
 
+//  6.
+  
 
+//  7.
+  const order_by_famliy_name = people.sort(function order(a, b) {
+    const [al , af]= a.split(" , ");
+    const [bl , bf]= b.split(" , ");
+    if(al > bl){
+      return 1
+    }else{
+      return -1
+      }
+  });
+  console.log(order_by_famliy_name);
 
-
-
+//  8. 
   const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+
+  const or = data.reduce(function (data , item) {
+    if(!data[item]){
+      data[item]=0;
+    }
+    data[item]++;
+    return data;
+  }, {});
+  console.log(or);
