@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    height: 100vh;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    align-items: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    transition: font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11), flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11), background 0.2s;
+}
+.a{
+    background-image: url("./img/IMG_3505.JPG");
+}
+.b{
+    background-image: url("./img/IMG_4569.JPG");
+}
+.c{
+    background-image: url("./img/IMG_4920.JPG");
+}
+.d{
+    background-image: url("./img/IMG_6294.JPG");
+}
+.e{
+    background-image: url("./img/IMG_7284.JPG");
+}
+.open{
+    flex-grow: 6;
+}
